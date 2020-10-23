@@ -1,0 +1,196 @@
+/*VISION RESPONSIVE DESKTOP*/
+
+@media screen and (min-width: 768px){   /*IGUAL O MAYOR A 769PX*/
+    
+    body{
+    width: 100vw;
+    /*max-width: 1440px;     /*????*/
+
+        header{
+            width: 100vw;
+            height: 5rem;
+            justify-content: space-between;
+            .logo{
+                width: 2.25rem;
+                height: 2.25rem;
+                margin-left: 6.25rem;
+                /*AGREGAR: TIENE 22PX DE MARGIN TOP Y 22 DE MARGIN BOTTOM*/
+            }
+            .btn-menu{
+                display: none;
+            }
+            .open{
+                display: none;
+            }
+            .close{
+                display: none;
+            }
+            ul {
+                height: 10vh;
+                margin-right: 6em;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-evenly;
+
+                li{
+                background-color: $color-blanco;
+                    a{
+                        color: $color-principal;
+                    }            
+                }
+                a:hover{
+                    color: $color-boton;
+                    text-decoration: line-through;
+                
+                    a:active{
+                        color:$color-gris; /*NO FUNCIONA ???*/
+                        text-decoration: line-through;
+                    }
+                }    
+            }
+        }
+        /*
+        &:hover ul{
+            display: inline-block;    
+        }*/
+
+        .tituloprincipal{
+            width: 70vw;
+            /*width: 45.125rem;*/
+            margin-left: 12.5rem;
+            box-sizing: border-box;
+            h1{
+                font-size: 4rem;
+                margin-top: 7.5rem;
+                display: inline-block;
+            }
+            p{
+                width: 45vw;
+            }
+            
+            button{
+                width: 14.125rem;
+                height: 3.5rem;
+                margin-top: 3.5rem;
+                padding: 1em;
+                display: inline-block;
+                background-color: $color-boton;
+                border: 0px;
+            }
+            .span {
+                display: inline;
+            }
+            .textoresponsive{
+                display: inline-block;
+            }
+            .textomobile{
+                display: none;
+            }
+        }
+
+        .fondoazul{
+            width: 100vw;
+            height: 40rem;
+            z-index: 1;    /*SIRVE???*/
+            clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%);
+        }
+        .episodios{
+            z-index: 10;
+            padding-top: 10em;
+            display: grid;
+            grid-template: repeat(3,1fr) / repeat(2, 1fr);
+            
+            h1{
+                grid-area: 1/1/1/1;
+            }
+            iframe{
+            width: 25rem;           /*max-width: 35vw;    /*????*/
+            height: 10rem;
+            }
+        }
+
+        .contenedornosotros{
+            width: 100vw;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            
+            .imgtelefono{
+                width: 28.6rem;
+                height: 41.25rem;
+            }
+        }
+
+        .entrevistas{
+            .contenedorimagenes{
+                width: 100vw;
+                /*max-width: 100vw;*/
+                box-sizing: border-box;
+                display: grid;
+                grid-template-areas: "imagen1 imagen2 imagen3"
+                                     "imagen4 imagen5 imagen6";
+                .imagen1{
+                    grid-area: imagen1;
+                }
+                .imagen2{
+                    grid-area: imagen2;
+                }
+                .imagen3{
+                    grid-area: imagen3;
+                }
+                .imagen4{
+                    grid-area: imagen4;
+                }
+                .imagen5{
+                    grid-area: imagen5;
+                }
+                .imagen6{
+                    grid-area: imagen6;
+                }
+            }
+        }
+        .topicos{
+            margin-top: 4em;
+            h1{
+            padding-left: 1rem;
+            }    
+            .imagenes{
+                width: 100vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
+        .novedades{
+            width: 100vw;
+            height: 15rem;
+            background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+            clip-path: polygon(0 68%, 100% 53%, 100% 100%, 0% 100%);
+            z-index: 1;
+            h1 button{
+                z-index: 5;
+            }
+        }
+
+        footer{
+            width: 100vw;
+            margin: 2em 0 2em 0;
+            padding: 2em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .textofooter{
+                align-items: flex-start;
+            }
+            .iconos{
+                width: 40%;
+                right: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: flex-end;
+            }
+        }
+    }  
+}
+

@@ -1,0 +1,36 @@
+.tituloprincipal{
+    max-width: 100vw;
+    box-sizing: border-box;
+    margin-top: 2em;
+
+    /*ESTILO PARA LOS H1*/
+    font-family: 'IBM Plex Sans';
+    font-size: 2.25rem;
+    color: $color-principal;
+    letter-spacing: 0;
+    line-height: 2.625rem;
+
+    p{
+        font-family: 'IBM Plex Mono';
+        font-size: .875rem;
+        color: #060A24;
+        line-height: 1.375rem;
+        letter-spacing: 0;
+    }
+
+    .textoresponsive{
+        display: none;
+    }
+
+    .spanuno{
+        display: block;
+    }
+    
+    .spandos{
+        text-decoration: line-through;
+    }
+        
+    .spantres{
+        color: $color-azul;
+    }
+}

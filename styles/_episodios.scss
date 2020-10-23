@@ -1,0 +1,33 @@
+.fondoazul{
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    transform: skewY(-5deg);
+}
+
+/*DEBERIA PONER EL TAMAÑO ACA Y NO EN EL IFRAME?*/
+.episodios{
+    width: 100vw;
+    /*max-width: 100%;*/
+    transform: skewY(5deg);
+    margin-top: 2em;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    h1{
+        text-align: left;
+        margin-left: 1rem;
+        margin-top: 1em;
+        margin-bottom: .5em;
+        color: $color-blanco; 
+    }
+    
+    iframe{
+        width: 95%;
+        height: 15rem; 
+        border: 0;
+        padding: 0 .5rem; 
+        margin: 1em auto 1em auto;
+        /*allowtransparency="true"   ???*/
+    }
+}

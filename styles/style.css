@@ -1,0 +1,326 @@
+@charset "UTF-8";
+header {
+  width: 100vw;
+  height: 10vh;
+  padding: 0 1em;
+  line-height: 8vh;
+  font-family: 'IBM Plex Mono';
+  /*CHEQUEAR DONDE MAS VA ESTA TIPOGRFIA*/
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box; }
+  header nav input {
+    display: none;
+    /*PARA QUITAR LOS BULLETS*/
+    /*agregar fontsize y margin right?*/ }
+  header nav .open {
+    display: block;
+    /*el icono de hamburguesa se ve*/ }
+  header nav .close {
+    /*sin clickear, no se ve la cruz*/
+    display: none; }
+  header nav input:checked ~ .open {
+    /*cuando se clikea icono hamburguesa desaparece*/
+    display: none; }
+  header nav input:checked ~ .close {
+    /*cuando se clickea la hamburg aparece la cruz*/
+    display: block; }
+  header nav input:checked ~ ul {
+    /*CUANDO SE CLICKEA EL INPUT*/
+    display: block; }
+  header nav ul {
+    width: 20rem;
+    height: 14rem;
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 1; }
+    header nav ul li {
+      list-style: none;
+      width: 100%;
+      height: 5vh;
+      padding: 0.5em;
+      background: #0000EC; }
+      header nav ul li a {
+        color: #FFFFFF;
+        line-height: 5vh;
+        text-decoration: none;
+        /*por qué deberia aclararlo?*/ }
+
+.tituloprincipal {
+  max-width: 100vw;
+  box-sizing: border-box;
+  margin-top: 2em;
+  /*ESTILO PARA LOS H1*/
+  font-family: 'IBM Plex Sans';
+  font-size: 2.25rem;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 2.625rem; }
+  .tituloprincipal p {
+    font-family: 'IBM Plex Mono';
+    font-size: .875rem;
+    color: #060A24;
+    line-height: 1.375rem;
+    letter-spacing: 0; }
+  .tituloprincipal .textoresponsive {
+    display: none; }
+  .tituloprincipal .spanuno {
+    display: block; }
+  .tituloprincipal .spandos {
+    text-decoration: line-through; }
+  .tituloprincipal .spantres {
+    color: #0000EC; }
+
+.fondoazul {
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  transform: skewY(-5deg); }
+
+/*DEBERIA PONER EL TAMAÑO ACA Y NO EN EL IFRAME?*/
+.episodios {
+  width: 100vw;
+  /*max-width: 100%;*/
+  transform: skewY(5deg);
+  margin-top: 2em;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .episodios h1 {
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    color: #FFFFFF; }
+  .episodios iframe {
+    width: 95%;
+    height: 15rem;
+    border: 0;
+    padding: 0 .5rem;
+    margin: 1em auto 1em auto;
+    /*allowtransparency="true"   ???*/ }
+
+.entrevistas {
+  width: 100vw;
+  /*max-width: 100%;  sirve? aca o en contenedor imagenes?*/ }
+  .entrevistas .contenedorimagenes {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; }
+    .entrevistas .contenedorimagenes .imagenes {
+      width: 100vw;
+      max-width: 100vw;
+      height: 5%; }
+
+.topicos {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center; }
+
+.contenedornosotros {
+  display: flex;
+  flex-direction: column; }
+  .contenedornosotros .imgtelefono {
+    width: 100vw;
+    height: 9.5%; }
+  .contenedornosotros .nosotros {
+    margin-bottom: 3.375rem; }
+
+.fondo {
+  width: 100vw;
+  height: 40vh;
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  clip-path: polygon(0 68%, 100% 53%, 100% 100%, 0% 100%); }
+
+.novedades {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+footer {
+  width: 100vh;
+  height: 1em;
+  display: block;
+  position: relative;
+  bottom: 0%; }
+
+/*font-family: 'IBM Plex Mono', monospace;
+font-family: 'IBM Plex Sans', sans-serif;*/
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 100vw;
+  /*DEBERIA PONERLO???*/
+  /*background-color: $color-blanco; */
+  border: 1px solid black; }
+
+.contenedorprincipal {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /*DONDE PONGO BOTON?*/ }
+  .contenedorprincipal .boton {
+    width: 15em;
+    margin: 1em;
+    padding: 1em;
+    background-color: #00F3BB;
+    border: 0px; }
+    .contenedorprincipal .boton .boton:hover {
+      /*NO FUNCIONA*/
+      background-image: gradient(225deg, #0000FE 0%, #00F0B8 100%);
+      color: #FFFFFF; }
+
+/*VISION RESPONSIVE DESKTOP*/
+@media screen and (min-width: 768px) {
+  /*IGUAL O MAYOR A 769PX*/
+  body {
+    width: 100vw;
+    /*max-width: 1440px;     /*????*/
+    /*
+    &:hover ul{
+        display: inline-block;    
+    }*/ }
+    body header {
+      width: 100vw;
+      height: 5rem;
+      justify-content: space-between; }
+      body header .logo {
+        width: 2.25rem;
+        height: 2.25rem;
+        margin-left: 6.25rem;
+        /*AGREGAR: TIENE 22PX DE MARGIN TOP Y 22 DE MARGIN BOTTOM*/ }
+      body header .btn-menu {
+        display: none; }
+      body header .open {
+        display: none; }
+      body header .close {
+        display: none; }
+      body header ul {
+        height: 10vh;
+        margin-right: 6em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly; }
+        body header ul li {
+          background-color: #FFFFFF; }
+          body header ul li a {
+            color: #060A24; }
+        body header ul a:hover {
+          color: #00F3BB;
+          text-decoration: line-through; }
+          body header ul a:hover a:active {
+            color: #060A24;
+            /*NO FUNCIONA ???*/
+            text-decoration: line-through; }
+    body .tituloprincipal {
+      width: 70vw;
+      /*width: 45.125rem;*/
+      margin-left: 12.5rem;
+      box-sizing: border-box; }
+      body .tituloprincipal h1 {
+        font-size: 4rem;
+        margin-top: 7.5rem;
+        display: inline-block; }
+      body .tituloprincipal p {
+        width: 45vw; }
+      body .tituloprincipal button {
+        width: 14.125rem;
+        height: 3.5rem;
+        margin-top: 3.5rem;
+        padding: 1em;
+        display: inline-block;
+        background-color: #00F3BB;
+        border: 0px; }
+      body .tituloprincipal .span {
+        display: inline; }
+      body .tituloprincipal .textoresponsive {
+        display: inline-block; }
+      body .tituloprincipal .textomobile {
+        display: none; }
+    body .fondoazul {
+      width: 100vw;
+      height: 40rem;
+      z-index: 1;
+      /*SIRVE???*/
+      clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%); }
+    body .episodios {
+      z-index: 10;
+      padding-top: 10em;
+      display: grid;
+      grid-template: repeat(3, 1fr)/repeat(2, 1fr); }
+      body .episodios h1 {
+        grid-area: 1/1/1/1; }
+      body .episodios iframe {
+        width: 25rem;
+        /*max-width: 35vw;    /*????*/
+        height: 10rem; }
+    body .contenedornosotros {
+      width: 100vw;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly; }
+      body .contenedornosotros .imgtelefono {
+        width: 28.6rem;
+        height: 41.25rem; }
+    body .entrevistas .contenedorimagenes {
+      width: 100vw;
+      /*max-width: 100vw;*/
+      box-sizing: border-box;
+      display: grid;
+      grid-template-areas: "imagen1 imagen2 imagen3" "imagen4 imagen5 imagen6"; }
+      body .entrevistas .contenedorimagenes .imagen1 {
+        grid-area: imagen1; }
+      body .entrevistas .contenedorimagenes .imagen2 {
+        grid-area: imagen2; }
+      body .entrevistas .contenedorimagenes .imagen3 {
+        grid-area: imagen3; }
+      body .entrevistas .contenedorimagenes .imagen4 {
+        grid-area: imagen4; }
+      body .entrevistas .contenedorimagenes .imagen5 {
+        grid-area: imagen5; }
+      body .entrevistas .contenedorimagenes .imagen6 {
+        grid-area: imagen6; }
+    body .topicos {
+      margin-top: 4em; }
+      body .topicos h1 {
+        padding-left: 1rem; }
+      body .topicos .imagenes {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly; }
+    body .novedades {
+      width: 100vw;
+      height: 15rem;
+      background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+      clip-path: polygon(0 68%, 100% 53%, 100% 100%, 0% 100%);
+      z-index: 1; }
+      body .novedades h1 button {
+        z-index: 5; }
+    body footer {
+      width: 100vw;
+      margin: 2em 0 2em 0;
+      padding: 2em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      body footer .textofooter {
+        align-items: flex-start; }
+      body footer .iconos {
+        width: 40%;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-end; } }
+/*
+@media screen and (min-width: 1220px){}   /*DE 1220PX PARA ARRIBA*/
+
+/*# sourceMappingURL=style.css.map */
