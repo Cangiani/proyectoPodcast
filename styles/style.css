@@ -40,8 +40,8 @@ header {
     header nav ul li {
       list-style: none;
       width: 100%;
-      height: 5vh;
-      padding: 0.5em;
+      height: 6vh;
+      padding: .5em;
       background: #0000EC; }
       header nav ul li a {
         color: #FFFFFF;
@@ -53,9 +53,12 @@ header {
   max-width: 100vw;
   box-sizing: border-box;
   margin-top: 2em;
+  padding-left: .5em;
   /*ESTILO PARA LOS H1*/
   font-family: 'IBM Plex Sans';
+  /*cambiar*/
   font-size: 2.25rem;
+  /*cambiar*/
   color: #060A24;
   letter-spacing: 0;
   line-height: 2.625rem; }
@@ -73,16 +76,25 @@ header {
     text-decoration: line-through; }
   .tituloprincipal .spantres {
     color: #0000EC; }
+  .tituloprincipal .boton {
+    width: 15em;
+    padding: 1em;
+    background-color: #00F3BB;
+    border: 0px; }
+    .tituloprincipal .boton .boton:hover {
+      /*NO FUNCIONA*/
+      background-image: gradient(225deg, #0000FE 0%, #00F0B8 100%);
+      color: #FFFFFF; }
 
 .fondoazul {
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-  transform: skewY(-5deg); }
+  transform: skewY(-3deg); }
 
 /*DEBERIA PONER EL TAMAÑO ACA Y NO EN EL IFRAME?*/
 .episodios {
   width: 100vw;
   /*max-width: 100%;*/
-  transform: skewY(5deg);
+  transform: skewY(3deg);
   margin-top: 2em;
   padding-bottom: 1rem;
   display: flex;
@@ -102,23 +114,35 @@ header {
     margin: 1em auto 1em auto;
     /*allowtransparency="true"   ???*/ }
 
+/*font-family: 'IBM Plex Mono', monospace;*/
 .entrevistas {
-  width: 100vw;
-  /*max-width: 100%;  sirve? aca o en contenedor imagenes?*/ }
+  width: 100vw; }
+  .entrevistas h1 span {
+    display: block; }
   .entrevistas .contenedorimagenes {
     width: 100vw;
     display: flex;
     flex-direction: column;
     box-sizing: border-box; }
-    .entrevistas .contenedorimagenes .imagenes {
-      width: 100vw;
-      max-width: 100vw;
-      height: 5%; }
+    .entrevistas .contenedorimagenes .img {
+      max-width: 100%; }
 
+/*font-family: 'IBM Plex Sans', sans-serif;*/
 .topicos {
+  margin-top: 2rem;
+  /*es mucha distancia?*/
   display: flex;
   flex-flow: column wrap;
   align-items: center; }
+  .topicos h1 span {
+    display: block;
+    /*DEBERIA UNIFICAR ESTE CODIGO? SE REPITE*/
+    /*align-content: flex-start;
+    align-items: flex-start;*/ }
+  .topicos .imagenes {
+    align-content: center;
+    align-items: center;
+    /*esta bien?*/ }
 
 .contenedornosotros {
   display: flex;
@@ -128,65 +152,75 @@ header {
     height: 9.5%; }
   .contenedornosotros .nosotros {
     margin-bottom: 3.375rem; }
+    .contenedornosotros .nosotros h1 span {
+      display: block; }
 
 .fondo {
   width: 100vw;
-  height: 40vh;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-  clip-path: polygon(0 68%, 100% 53%, 100% 100%, 0% 100%); }
+  clip-path: polygon(0 32%, 100% 0%, 100% 100%, 0% 100%); }
 
 .novedades {
+  margin: 1em 0;
+  padding: 3em 0;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
+  .novedades h1 {
+    color: #FFFFFF; }
+    .novedades h1 span {
+      display: block; }
+  .novedades .boton {
+    /*REPETIDO DE TITULOPRINCIPAL, UNIR?? misma class (boton)*/
+    width: 15em;
+    padding: 1em;
+    margin: 1em 0;
+    /*unica diferencia, en titulo principal es margin-bottom*/
+    background-color: #00F3BB;
+    border: 0px; }
+    .novedades .boton .boton:hover {
+      /*NO FUNCIONA*/
+      background-image: gradient(225deg, #0000FE 0%, #00F0B8 100%);
+      color: #FFFFFF; }
 
 footer {
   width: 100vh;
-  height: 1em;
-  display: block;
-  position: relative;
-  bottom: 0%; }
+  /*display: block;
+  position: relative;*/
+  bottom: 0%;
+  margin-bottom: 2em; }
 
-/*font-family: 'IBM Plex Mono', monospace;
-font-family: 'IBM Plex Sans', sans-serif;*/
+.textofooter {
+  /*FALTA QUE ESTÉ ALINEADO CON LOS ICONOS*/
+  width: 100vw;
+  line-height: 3em;
+  text-align: center; }
+
+.iconos {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
 * {
   margin: 0;
   padding: 0; }
 
-body {
-  width: 100vw;
-  /*DEBERIA PONERLO???*/
-  /*background-color: $color-blanco; */
-  border: 1px solid black; }
-
 .contenedorprincipal {
   width: 320px;
+  /*??????????????*/
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
-  /*DONDE PONGO BOTON?*/ }
-  .contenedorprincipal .boton {
-    width: 15em;
-    margin: 1em;
-    padding: 1em;
-    background-color: #00F3BB;
-    border: 0px; }
-    .contenedorprincipal .boton .boton:hover {
-      /*NO FUNCIONA*/
-      background-image: gradient(225deg, #0000FE 0%, #00F0B8 100%);
-      color: #FFFFFF; }
+  align-content: center; }
 
 /*VISION RESPONSIVE DESKTOP*/
 @media screen and (min-width: 768px) {
   /*IGUAL O MAYOR A 769PX*/
   body {
     width: 100vw;
-    /*max-width: 1440px;     /*????*/
-    /*
-    &:hover ul{
-        display: inline-block;    
-    }*/ }
+    /*max-width: 1440px;     /*????*/ }
     body header {
       width: 100vw;
       height: 5rem;
@@ -222,11 +256,12 @@ body {
     body .tituloprincipal {
       width: 70vw;
       /*width: 45.125rem;*/
-      margin-left: 12.5rem;
-      box-sizing: border-box; }
+      margin-left: 12rem;
+      /*Es el margen de todos los h1 de los bloques-> unificar?*/
+      padding-left: 0; }
       body .tituloprincipal h1 {
         font-size: 4rem;
-        margin-top: 7.5rem;
+        margin-top: 3rem;
         display: inline-block; }
       body .tituloprincipal p {
         width: 45vw; }
@@ -234,8 +269,7 @@ body {
         width: 14.125rem;
         height: 3.5rem;
         margin-top: 3.5rem;
-        padding: 1em;
-        display: inline-block;
+        display: block;
         background-color: #00F3BB;
         border: 0px; }
       body .tituloprincipal .span {
@@ -247,28 +281,51 @@ body {
     body .fondoazul {
       width: 100vw;
       height: 40rem;
-      z-index: 1;
-      /*SIRVE???*/
       clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%); }
     body .episodios {
-      z-index: 10;
-      padding-top: 10em;
+      padding: 6em 0;
+      /*?*/
       display: grid;
-      grid-template: repeat(3, 1fr)/repeat(2, 1fr); }
+      grid-template: repeat(3, 10% 1fr)/repeat(2, 1fr); }
       body .episodios h1 {
+        margin-left: 12rem;
         grid-area: 1/1/1/1; }
       body .episodios iframe {
-        width: 25rem;
+        width: 35vw;
         /*max-width: 35vw;    /*????*/
         height: 10rem; }
+      body .episodios .iframe1 {
+        grid-area: 2/1/2/2; }
+      body .episodios .iframe2 {
+        grid-area: 2/2/2/3; }
+      body .episodios .iframe3 {
+        grid-area: 3/1/3/2; }
+      body .episodios .iframe4 {
+        grid-area: 3/2/3/3; }
     body .contenedornosotros {
       width: 100vw;
+      margin-top: -5em;
+      margin-bottom: 2.5em;
+      /*esta bien o mas distancia?*/
+      position: relative;
+      z-index: 99;
       display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-evenly; }
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      align-content: center; }
       body .contenedornosotros .imgtelefono {
-        width: 28.6rem;
-        height: 41.25rem; }
+        /*MEJORAR POSICIONAMIENTO Y TAMAÑO*/
+        width: 20vw; }
+      body .contenedornosotros .nosotros {
+        width: 35vw;
+        /*deberia ser asi? modificar el tamaño con width?*/
+        line-height: 1.5em; }
+    body .entrevistas h1 {
+      margin-left: 12rem; }
+      body .entrevistas h1 span {
+        /*se puede unificar los span?*/
+        display: inline-block; }
     body .entrevistas .contenedorimagenes {
       width: 100vw;
       /*max-width: 100vw;*/
@@ -288,39 +345,53 @@ body {
       body .entrevistas .contenedorimagenes .imagen6 {
         grid-area: imagen6; }
     body .topicos {
-      margin-top: 4em; }
+      margin-top: 4em;
+      align-items: unset;
+      /*para cancelar mobile*/ }
       body .topicos h1 {
-        padding-left: 1rem; }
+        margin-left: 12rem; }
+        body .topicos h1 span {
+          display: inline-block; }
       body .topicos .imagenes {
         width: 100vw;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly; }
+        justify-content: space-around; }
+        body .topicos .imagenes p {
+          margin-top: 1em; }
+          body .topicos .imagenes p span {
+            display: block; }
     body .novedades {
       width: 100vw;
-      height: 15rem;
+      /*height: 15rem;
       background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
       clip-path: polygon(0 68%, 100% 53%, 100% 100%, 0% 100%);
-      z-index: 1; }
-      body .novedades h1 button {
-        z-index: 5; }
+      z-index: 1;
+      h1 button{
+          z-index: 5;
+      }*/ }
     body footer {
       width: 100vw;
-      margin: 2em 0 2em 0;
-      padding: 2em;
+      margin: .5em 0 .5em 0;
+      padding: .5em;
       display: flex;
       flex-direction: row;
-      justify-content: space-between; }
+      justify-content: space-evenly;
+      align-items: center; }
       body footer .textofooter {
-        align-items: flex-start; }
+        align-items: flex-start;
+        text-align: start;
+        padding-left: 2em;
+        /*deberia ser tambien para iconos?*/ }
       body footer .iconos {
-        width: 40%;
-        right: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: flex-end; } }
 /*
-@media screen and (min-width: 1220px){}   /*DE 1220PX PARA ARRIBA*/
+body{
+    width: 100vw; DEBERIA PONERLO???
+    background-color: $color-blanco; es necesario?
+}*/
 
 /*# sourceMappingURL=style.css.map */

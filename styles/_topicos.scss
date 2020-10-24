@@ -1,5 +1,16 @@
 .topicos{
+    margin-top: 2rem;   /*es mucha distancia?*/
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+
+    h1 span{
+        display: block;  /*DEBERIA UNIFICAR ESTE CODIGO? SE REPITE*/
+        /*align-content: flex-start;
+        align-items: flex-start;*/
+    }
+    .imagenes{
+        align-content: center;
+        align-items: center;  /*esta bien?*/
+    }
 }

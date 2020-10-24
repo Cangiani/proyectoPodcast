@@ -1,7 +1,21 @@
 footer{
     width: 100vh;
-    height: 1em;
-    display: block;
-    position: relative;
+    /*display: block;
+    position: relative;*/
     bottom: 0%;
-}    
+    margin-bottom: 2em;
+}   
+
+.textofooter{    /*FALTA QUE ESTÉ ALINEADO CON LOS ICONOS*/
+    width: 100vw;
+    line-height: 3em;
+    text-align: center;
+}
+
+.iconos{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+

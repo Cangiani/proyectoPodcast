@@ -1,48 +1,30 @@
 @import 'variables';
 @import 'header';
 @import 'tituloprincipal';
-@import 'episodios';
-@import 'entrevistas';
+@import 'episodios';                /*font-family: 'IBM Plex Mono', monospace;*/
+@import 'entrevistas';              /*font-family: 'IBM Plex Sans', sans-serif;*/
 @import 'topicos';
 @import 'nosotros';
 @import 'novedades';
 @import 'footer';
-
-/*font-family: 'IBM Plex Mono', monospace;
-font-family: 'IBM Plex Sans', sans-serif;*/
 
 *{
     margin: 0;   
     padding: 0; 
 }
 
-body{
-    width: 100vw; /*DEBERIA PONERLO???*/
-    /*background-color: $color-blanco; */  
-    border: 1px solid black;
-}
-    
 .contenedorprincipal{
-    width: 320px;
+    width: 320px;    /*??????????????*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-
-    /*DONDE PONGO BOTON?*/
-    .boton{
-        width: 15em;
-        margin: 1em;
-        padding: 1em;background-color: $color-boton;
-        border: 0px;     
-        .boton:hover{   /*NO FUNCIONA*/
-            background-image: gradient(225deg, #0000FE 0%, #00F0B8 100%);
-            color: $color-blanco;        
-        }
-    }
 }
 
 @import 'responsive';
 
 /*
-@media screen and (min-width: 1220px){}   /*DE 1220PX PARA ARRIBA*/
+body{
+    width: 100vw; DEBERIA PONERLO???
+    background-color: $color-blanco; es necesario?
+}*/

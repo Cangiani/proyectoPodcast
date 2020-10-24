@@ -1,13 +1,13 @@
 .fondoazul{
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-    transform: skewY(-5deg);
+    transform: skewY(-3deg);
 }
 
 /*DEBERIA PONER EL TAMAÑO ACA Y NO EN EL IFRAME?*/
 .episodios{
     width: 100vw;
     /*max-width: 100%;*/
-    transform: skewY(5deg);
+    transform: skewY(3deg);
     margin-top: 2em;
     padding-bottom: 1rem;
     display: flex;

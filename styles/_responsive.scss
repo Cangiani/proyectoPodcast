@@ -49,19 +49,16 @@
                 }    
             }
         }
-        /*
-        &:hover ul{
-            display: inline-block;    
-        }*/
 
         .tituloprincipal{
             width: 70vw;
             /*width: 45.125rem;*/
-            margin-left: 12.5rem;
-            box-sizing: border-box;
+            margin-left: 12rem;    /*Es el margen de todos los h1 de los bloques-> unificar?*/
+            padding-left: 0;
+
             h1{
                 font-size: 4rem;
-                margin-top: 7.5rem;
+                margin-top: 3rem;
                 display: inline-block;
             }
             p{
@@ -72,8 +69,7 @@
                 width: 14.125rem;
                 height: 3.5rem;
                 margin-top: 3.5rem;
-                padding: 1em;
-                display: inline-block;
+                display: block;
                 background-color: $color-boton;
                 border: 0px;
             }
@@ -91,37 +87,63 @@
         .fondoazul{
             width: 100vw;
             height: 40rem;
-            z-index: 1;    /*SIRVE???*/
             clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%);
         }
         .episodios{
-            z-index: 10;
-            padding-top: 10em;
+            padding: 6em 0;   /*?*/
             display: grid;
-            grid-template: repeat(3,1fr) / repeat(2, 1fr);
+            grid-template: repeat(3, 10% 1fr) / repeat(2, 1fr);       
             
             h1{
+                margin-left: 12rem;
                 grid-area: 1/1/1/1;
             }
             iframe{
-            width: 25rem;           /*max-width: 35vw;    /*????*/
+            width: 35vw;           /*max-width: 35vw;    /*????*/
             height: 10rem;
+            }
+            .iframe1{
+                grid-area: 2/1/2/2;
+            }
+            .iframe2{
+                grid-area: 2/2/2/3;
+            }
+            .iframe3{
+                grid-area: 3/1/3/2;
+            }
+            .iframe4{
+                grid-area: 3/2/3/3;
             }
         }
 
         .contenedornosotros{
             width: 100vw;
+            margin-top: -5em;
+            margin-bottom: 2.5em;   /*esta bien o mas distancia?*/
+            position: relative;
+            z-index: 99;
             display: flex;
-            flex-flow: row nowrap;
+            flex-direction: row;
             justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
             
-            .imgtelefono{
-                width: 28.6rem;
-                height: 41.25rem;
+            .imgtelefono{    /*MEJORAR POSICIONAMIENTO Y TAMAÑO*/
+                width: 20vw;
+            }
+            .nosotros{
+                width: 35vw;   /*deberia ser asi? modificar el tamaño con width?*/
+                line-height: 1.5em;
             }
         }
 
         .entrevistas{
+            h1{
+                margin-left: 12rem;
+                span{    /*se puede unificar los span?*/
+                    display: inline-block;
+                }
+            }
             .contenedorimagenes{
                 width: 100vw;
                 /*max-width: 100vw;*/
@@ -151,46 +173,58 @@
         }
         .topicos{
             margin-top: 4em;
+            align-items: unset; /*para cancelar mobile*/
+            
             h1{
-            padding-left: 1rem;
+                margin-left: 12rem;
+                span{
+                    display: inline-block;
+                }
             }    
             .imagenes{
                 width: 100vw;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-evenly;
+                justify-content: space-around;
+                p{
+                    margin-top: 1em;
+                    span{
+                        display: block;
+                    }
+                }
             }
         }
         .novedades{
             width: 100vw;
-            height: 15rem;
+            /*height: 15rem;
             background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
             clip-path: polygon(0 68%, 100% 53%, 100% 100%, 0% 100%);
             z-index: 1;
             h1 button{
                 z-index: 5;
-            }
+            }*/
         }
 
         footer{
             width: 100vw;
-            margin: 2em 0 2em 0;
-            padding: 2em;
+            margin: .5em 0 .5em 0;
+            padding: .5em;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-evenly;
+            align-items: center;
+
             .textofooter{
                 align-items: flex-start;
+                text-align: start;
+                padding-left: 2em;   /*deberia ser tambien para iconos?*/
             }
             .iconos{
-                width: 40%;
-                right: 0;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
                 align-items: flex-end;
             }
         }
-    }  
+    }     
 }
-

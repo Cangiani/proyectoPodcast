@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>proyectopodcast</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <!--UNIFICAR GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!--fontawesome.com  LO DEJO aca???-->
@@ -49,14 +51,14 @@
                 <div class="fondoazul">
                     <div class="episodios" id="episodios">
                         <h1>Episodios</h1>
-                        <!--<div class="background"></div>-->
-                        <iframe src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" allow="encrypted-media"></iframe> 
+
+                        <iframe class="iframe1" src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" allow="encrypted-media"></iframe> 
                             
-                        <iframe src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby" allow="encrypted-media"></iframe>
+                        <iframe class="iframe2" src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby" allow="encrypted-media"></iframe>
 
-                        <iframe src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv" allow="encrypted-media"></iframe>
+                        <iframe class="iframe3" src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv" allow="encrypted-media"></iframe>
 
-                        <iframe src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ" allow="encrypted-media"></iframe>
+                        <iframe class="iframe4" src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ" allow="encrypted-media"></iframe>
                         
                     </div>
                 </div>
@@ -68,7 +70,7 @@
                         <img src="./images/phone.png" class="imgtelefono" alt="telefono">
                     </div>
                     <div class="nosotros" id="nosotros">
-                        <h1>De dónde venimos</h1>
+                        <h1>De dónde <span>venimos</span></h1>
                         <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
                     </div>
                 </div>
@@ -76,26 +78,26 @@
             <!--Sección entrevistas a invitadas/os-->
             <section>
                 <div class="entrevistas" id="entrevistas">
-                    <h1>Invitadas/os estelares</h1>
+                    <h1>Invitadas/os <span>estelares</span></h1>
                     <div class="contenedorimagenes">
-                        <img src="./images/grace-hopper.png" class="imagen1" alt="grace-hopper">
+                        <img src="./images/grace-hopper.png" class="img imagen1" alt="grace-hopper">
 
-                        <img src="./images/Katie-Bouman.png" class="imagen2" alt="katie-bouman">
+                        <img src="./images/Katie-Bouman.png" class="img imagen2" alt="katie-bouman">
 
-                        <img src="./images/Margaret_Hamilton.png" class="imagen3" alt="margaret-hamilton">
+                        <img src="./images/Margaret_Hamilton.png" class="img imagen3" alt="margaret-hamilton">
 
-                        <img src="./images/An-E.R.A.Univac-1103-computer-in-the-1950s.png" class="imagen4" alt="computerin1950">
+                        <img src="./images/An-E.R.A.Univac-1103-computer-in-the-1950s.png" class="img imagen4" alt="computerin1950">
 
-                        <img src="./images/Computer-operators-with-an-Eniac-the-world’s-first-programmable-general-purpose-computer.png" class="imagen5" alt="eniac">
+                        <img src="./images/Computer-operators-with-an-Eniac-the-world’s-first-programmable-general-purpose-computer.png" class="img imagen5" alt="eniac">
 
-                        <img src="./images/susan-kare.png" class="imagen6" alt="susan-kare">
+                        <img src="./images/susan-kare.png" class="img imagen6" alt="susan-kare">
                     </div>
                 </div>
             </section>
             <!--Sección tópicos-->
             <section>
                 <div class="topicos" id="topicos">
-                    <h1>Algunos de nuestros temas</h1>
+                    <h1>Algunos de <span>nuestros temas</span></h1>
                     <div class="imagenes">
                         <div>
                             <img src="./images/icon1.svg" alt="icono1" width="104px" height="104px">
@@ -103,7 +105,7 @@
                         </div>
                         <div>
                             <img src="./images/icon2.svg" alt="icono2" width="104px" height="104px">
-                            <p>Repensando la programación</p>
+                            <p>Repensando la <span>programación</span></p>
                         </div>
                         <div>
                             <img src="./images/icon3.svg" alt="icono3" width="104px" height="104px">
@@ -111,7 +113,7 @@
                         </div>
                         <div>
                             <img src="./images/icon4.svg" alt="icono4" width="104px" height="104px">
-                            <p>Seguridad informática</p>
+                            <p>Seguridad <span>informática</span></p>
                         </div>
                     </div>
                 </div>
@@ -120,7 +122,7 @@
             <section>
                 <div class="fondo">
                     <div class="novedades">
-                        <h1>¿Querés las últimas novedades?</h1>
+                        <h1>¿Querés las <span>últimas</span> novedades?</h1>
                         <button class="boton">ESCUCHÁ LOS EPISODIOS</button>
                     </div>
                 </div>
