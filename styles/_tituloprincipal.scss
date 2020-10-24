@@ -1,22 +1,42 @@
+@mixin parrafo {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;   /*???*/
+    font-size: 1rem;
+    color: $color-principal;
+    line-height: 1.375rem;
+    letter-spacing: 0;
+}
+
+@mixin boton {
+    width: 18rem;
+    padding: 1em;
+    background-color: $color-boton;
+    border: none;  
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+
+    &:hover{   
+        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        color: $color-blanco;      
+    }
+}
+
 .tituloprincipal{
     max-width: 100vw;
     box-sizing: border-box;
     margin-top: 2em;
     padding-left: .5em;
-
-    /*ESTILO PARA LOS H1*/
-    font-family: 'IBM Plex Sans';   /*cambiar*/
-    font-size: 2.25rem;             /*cambiar*/
+    font-family: 'IBM Plex Sans', sans-serif;   /*cambiar*/
+    font-weight: 300;   /*funciona?*/
+    font-size: 2rem;             /*cambiar*/
     color: $color-principal;
     letter-spacing: 0;
     line-height: 2.625rem;
 
     p{
-        font-family: 'IBM Plex Mono';
-        font-size: .875rem;
-        color: #060A24;
-        line-height: 1.375rem;
-        letter-spacing: 0;
+        @include parrafo;
+        padding-right: 1em;  /*?*/
+        margin-top: 1em;
     }
 
     .textoresponsive{
@@ -31,18 +51,8 @@
         text-decoration: line-through;
     }
         
-    .spantres{
-        color: $color-azul;
-    }
-
     .boton{
-        width: 15em;
-        padding: 1em;
-        background-color: $color-boton;
-        border: 0px;     
-        .boton:hover{   /*NO FUNCIONA*/
-            background-image: gradient(225deg, #0000FE 0%, #00F0B8 100%);
-            color: $color-blanco;        
-        }
+        margin-right: 1em;
+        @include boton;
     }
 }

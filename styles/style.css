@@ -45,7 +45,7 @@ header {
       background: #0000EC; }
       header nav ul li a {
         color: #FFFFFF;
-        line-height: 5vh;
+        line-height: 1.375em;
         text-decoration: none;
         /*por qué deberia aclararlo?*/ }
 
@@ -54,54 +54,67 @@ header {
   box-sizing: border-box;
   margin-top: 2em;
   padding-left: .5em;
-  /*ESTILO PARA LOS H1*/
-  font-family: 'IBM Plex Sans';
+  font-family: 'IBM Plex Sans', sans-serif;
   /*cambiar*/
-  font-size: 2.25rem;
+  font-weight: 300;
+  /*funciona?*/
+  font-size: 2rem;
   /*cambiar*/
   color: #060A24;
   letter-spacing: 0;
   line-height: 2.625rem; }
   .tituloprincipal p {
-    font-family: 'IBM Plex Mono';
-    font-size: .875rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    /*???*/
+    font-size: 1rem;
     color: #060A24;
     line-height: 1.375rem;
-    letter-spacing: 0; }
+    letter-spacing: 0;
+    padding-right: 1em;
+    /*?*/
+    margin-top: 1em; }
   .tituloprincipal .textoresponsive {
     display: none; }
   .tituloprincipal .spanuno {
     display: block; }
   .tituloprincipal .spandos {
     text-decoration: line-through; }
-  .tituloprincipal .spantres {
-    color: #0000EC; }
   .tituloprincipal .boton {
-    width: 15em;
+    margin-right: 1em;
+    width: 18rem;
     padding: 1em;
     background-color: #00F3BB;
-    border: 0px; }
-    .tituloprincipal .boton .boton:hover {
-      /*NO FUNCIONA*/
-      background-image: gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    border: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500; }
+    .tituloprincipal .boton:hover {
+      background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
       color: #FFFFFF; }
 
 .fondoazul {
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   transform: skewY(-3deg); }
 
-/*DEBERIA PONER EL TAMAÑO ACA Y NO EN EL IFRAME?*/
 .episodios {
+  /*DEBERIA PONER EL TAMAÑO ACA Y NO EN EL IFRAME?*/
   width: 100vw;
   /*max-width: 100%;*/
   transform: skewY(3deg);
   margin-top: 2em;
-  padding-bottom: 1rem;
+  padding-bottom: 6rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
-  .episodios h1 {
-    text-align: left;
+  justify-content: center;
+  color: #060A24;
+  font-family: 'IBM Plex Sans';
+  font-weight: 300;
+  letter-spacing: 0;
+  font-size: 1em;
+  /*??*/
+  text-align: left;
+  padding-bottom: 2rem; }
+  .episodios h2 {
     margin-left: 1rem;
     margin-top: 1em;
     margin-bottom: .5em;
@@ -112,12 +125,31 @@ header {
     border: 0;
     padding: 0 .5rem;
     margin: 1em auto 1em auto;
+    box-sizing: border-box;
     /*allowtransparency="true"   ???*/ }
 
+/* lo que hizo laura:
+iframe {
+    display: block;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 14.5em;
+    border: 0;
+    margin-top: 5%;
+    padding: 0 5%;
+}*/
 /*font-family: 'IBM Plex Mono', monospace;*/
 .entrevistas {
-  width: 100vw; }
-  .entrevistas h1 span {
+  width: 100vw;
+  color: #060A24;
+  font-family: 'IBM Plex Sans';
+  font-weight: 300;
+  letter-spacing: 0;
+  font-size: 1em;
+  /*??*/
+  text-align: left;
+  padding-bottom: 2rem; }
+  .entrevistas h2 span {
     display: block; }
   .entrevistas .contenedorimagenes {
     width: 100vw;
@@ -133,26 +165,53 @@ header {
   /*es mucha distancia?*/
   display: flex;
   flex-flow: column wrap;
-  align-items: center; }
-  .topicos h1 span {
+  align-items: center;
+  align-content: center;
+  color: #060A24;
+  font-family: 'IBM Plex Sans';
+  font-weight: 300;
+  letter-spacing: 0;
+  font-size: 1em;
+  /*??*/
+  text-align: left;
+  padding-bottom: 2rem; }
+  .topicos h2 span {
     display: block;
     /*DEBERIA UNIFICAR ESTE CODIGO? SE REPITE*/
     /*align-content: flex-start;
     align-items: flex-start;*/ }
   .topicos .imagenes {
-    align-content: center;
-    align-items: center;
-    /*esta bien?*/ }
+    margin: 2em; }
 
 .contenedornosotros {
   display: flex;
   flex-direction: column; }
+  .contenedornosotros .telefono {
+    transform: translateY(-5em); }
   .contenedornosotros .imgtelefono {
-    width: 100vw;
-    height: 9.5%; }
+    width: 22.5rem;
+    max-width: 100vw;
+    position: relative;
+    text-align: center;
+    z-index: 99; }
   .contenedornosotros .nosotros {
-    margin-bottom: 3.375rem; }
-    .contenedornosotros .nosotros h1 span {
+    /*margin-bottom: 3.375rem;*/
+    color: #060A24;
+    font-family: 'IBM Plex Sans';
+    font-weight: 300;
+    letter-spacing: 0;
+    font-size: 1em;
+    /*??*/
+    text-align: left;
+    padding-bottom: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    /*???*/
+    font-size: 1rem;
+    color: #060A24;
+    line-height: 1.375rem;
+    letter-spacing: 0; }
+    .contenedornosotros .nosotros h2 span {
       display: block; }
 
 .fondo {
@@ -167,21 +226,29 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .novedades h1 {
+  .novedades h2 {
+    color: #060A24;
+    font-family: 'IBM Plex Sans';
+    font-weight: 300;
+    letter-spacing: 0;
+    font-size: 1em;
+    /*??*/
+    text-align: left;
+    padding-bottom: 2rem;
     color: #FFFFFF; }
-    .novedades h1 span {
+    .novedades h2 span {
       display: block; }
   .novedades .boton {
-    /*REPETIDO DE TITULOPRINCIPAL, UNIR?? misma class (boton)*/
-    width: 15em;
-    padding: 1em;
     margin: 1em 0;
     /*unica diferencia, en titulo principal es margin-bottom*/
+    width: 18rem;
+    padding: 1em;
     background-color: #00F3BB;
-    border: 0px; }
-    .novedades .boton .boton:hover {
-      /*NO FUNCIONA*/
-      background-image: gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    border: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500; }
+    .novedades .boton:hover {
+      background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
       color: #FFFFFF; }
 
 footer {
@@ -208,8 +275,6 @@ footer {
   padding: 0; }
 
 .contenedorprincipal {
-  width: 320px;
-  /*??????????????*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -245,14 +310,19 @@ footer {
         body header ul li {
           background-color: #FFFFFF; }
           body header ul li a {
-            color: #060A24; }
-        body header ul a:hover {
-          color: #00F3BB;
-          text-decoration: line-through; }
-          body header ul a:hover a:active {
+            font-family: 'IBM Plex Mono', sans-serif;
+            font-weight: 500;
+            font-size: 1em;
             color: #060A24;
-            /*NO FUNCIONA ???*/
-            text-decoration: line-through; }
+            letter-spacing: 0;
+            text-align: center; }
+            body header ul li a:hover {
+              color: #00F3BB;
+              text-decoration: line-through; }
+            body header ul li a:active {
+              color: #060A24;
+              /*NO FUNCIONA ???*/
+              text-decoration: line-through; }
     body .tituloprincipal {
       width: 70vw;
       /*width: 45.125rem;*/
@@ -264,16 +334,18 @@ footer {
         margin-top: 3rem;
         display: inline-block; }
       body .tituloprincipal p {
-        width: 45vw; }
+        width: 50vw; }
       body .tituloprincipal button {
         width: 14.125rem;
+        /*no funciona, considera el de mobile*/
         height: 3.5rem;
         margin-top: 3.5rem;
         display: block;
-        background-color: #00F3BB;
         border: 0px; }
       body .tituloprincipal .span {
         display: inline; }
+      body .tituloprincipal .punto {
+        color: #0000EC; }
       body .tituloprincipal .textoresponsive {
         display: inline-block; }
       body .tituloprincipal .textomobile {
@@ -283,11 +355,11 @@ footer {
       height: 40rem;
       clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%); }
     body .episodios {
-      padding: 6em 0;
+      padding: 5em 0;
       /*?*/
       display: grid;
       grid-template: repeat(3, 10% 1fr)/repeat(2, 1fr); }
-      body .episodios h1 {
+      body .episodios h2 {
         margin-left: 12rem;
         grid-area: 1/1/1/1; }
       body .episodios iframe {
@@ -304,11 +376,7 @@ footer {
         grid-area: 3/2/3/3; }
     body .contenedornosotros {
       width: 100vw;
-      margin-top: -5em;
-      margin-bottom: 2.5em;
-      /*esta bien o mas distancia?*/
-      position: relative;
-      z-index: 99;
+      margin-top: 1em;
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
@@ -316,14 +384,14 @@ footer {
       align-content: center; }
       body .contenedornosotros .imgtelefono {
         /*MEJORAR POSICIONAMIENTO Y TAMAÑO*/
-        width: 20vw; }
+        width: 28.6rem; }
       body .contenedornosotros .nosotros {
         width: 35vw;
         /*deberia ser asi? modificar el tamaño con width?*/
         line-height: 1.5em; }
-    body .entrevistas h1 {
+    body .entrevistas h2 {
       margin-left: 12rem; }
-      body .entrevistas h1 span {
+      body .entrevistas h2 span {
         /*se puede unificar los span?*/
         display: inline-block; }
     body .entrevistas .contenedorimagenes {
@@ -348,9 +416,9 @@ footer {
       margin-top: 4em;
       align-items: unset;
       /*para cancelar mobile*/ }
-      body .topicos h1 {
+      body .topicos h2 {
         margin-left: 12rem; }
-        body .topicos h1 span {
+        body .topicos h2 span {
           display: inline-block; }
       body .topicos .imagenes {
         width: 100vw;
@@ -367,7 +435,7 @@ footer {
       background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
       clip-path: polygon(0 68%, 100% 53%, 100% 100%, 0% 100%);
       z-index: 1;
-      h1 button{
+      h2 button{
           z-index: 5;
       }*/ }
     body footer {

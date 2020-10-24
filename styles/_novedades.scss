@@ -12,23 +12,17 @@
     justify-content: center;
     align-items: center;
     
-    h1{
+    h2{
+        @include h2;
         color: $color-blanco;
+    
         span{
             display: block;
         }
     }
 
-    .boton{            /*REPETIDO DE TITULOPRINCIPAL, UNIR?? misma class (boton)*/
-        width: 15em;
-        padding: 1em;
+    .boton{    
         margin: 1em 0;    /*unica diferencia, en titulo principal es margin-bottom*/
-        background-color: $color-boton;
-        border: 0px;    
-
-        .boton:hover{   /*NO FUNCIONA*/
-            background-image: gradient(225deg, #0000FE 0%, #00F0B8 100%);
-            color: $color-blanco;        
-        }
+        @include boton;
     }
 }

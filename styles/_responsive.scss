@@ -34,19 +34,26 @@
 
                 li{
                 background-color: $color-blanco;
+
                     a{
+                        font-family: 'IBM Plex Mono', sans-serif;
+                        font-weight: 500;
+                        font-size: 1em;
                         color: $color-principal;
-                    }            
-                }
-                a:hover{
-                    color: $color-boton;
-                    text-decoration: line-through;
+                        letter-spacing: 0;
+                        text-align: center;
+
+                        &:hover{
+                            color: $color-boton;
+                            text-decoration: line-through;
+                        }
                 
-                    a:active{
-                        color:$color-gris; /*NO FUNCIONA ???*/
-                        text-decoration: line-through;
-                    }
-                }    
+                        &:active{
+                            color:$color-gris; /*NO FUNCIONA ???*/
+                            text-decoration: line-through;
+                        }
+                    }            
+                }   
             }
         }
 
@@ -62,19 +69,21 @@
                 display: inline-block;
             }
             p{
-                width: 45vw;
+                width: 50vw;
             }
             
             button{
-                width: 14.125rem;
+                width: 14.125rem;  /*no funciona, considera el de mobile*/
                 height: 3.5rem;
                 margin-top: 3.5rem;
                 display: block;
-                background-color: $color-boton;
                 border: 0px;
             }
             .span {
                 display: inline;
+            }
+            .punto{
+                color: $color-azul;
             }
             .textoresponsive{
                 display: inline-block;
@@ -90,11 +99,11 @@
             clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%);
         }
         .episodios{
-            padding: 6em 0;   /*?*/
+            padding: 5em 0;   /*?*/
             display: grid;
             grid-template: repeat(3, 10% 1fr) / repeat(2, 1fr);       
             
-            h1{
+            h2{
                 margin-left: 12rem;
                 grid-area: 1/1/1/1;
             }
@@ -118,10 +127,7 @@
 
         .contenedornosotros{
             width: 100vw;
-            margin-top: -5em;
-            margin-bottom: 2.5em;   /*esta bien o mas distancia?*/
-            position: relative;
-            z-index: 99;
+            margin-top: 1em;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -129,8 +135,9 @@
             align-content: center;
             
             .imgtelefono{    /*MEJORAR POSICIONAMIENTO Y TAMAÑO*/
-                width: 20vw;
+                width: 28.6rem;
             }
+            
             .nosotros{
                 width: 35vw;   /*deberia ser asi? modificar el tamaño con width?*/
                 line-height: 1.5em;
@@ -138,7 +145,7 @@
         }
 
         .entrevistas{
-            h1{
+            h2{
                 margin-left: 12rem;
                 span{    /*se puede unificar los span?*/
                     display: inline-block;
@@ -175,7 +182,7 @@
             margin-top: 4em;
             align-items: unset; /*para cancelar mobile*/
             
-            h1{
+            h2{
                 margin-left: 12rem;
                 span{
                     display: inline-block;
@@ -200,7 +207,7 @@
             background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
             clip-path: polygon(0 68%, 100% 53%, 100% 100%, 0% 100%);
             z-index: 1;
-            h1 button{
+            h2 button{
                 z-index: 5;
             }*/
         }

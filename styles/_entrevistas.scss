@@ -1,12 +1,12 @@
 .entrevistas{
     width: 100vw;
+    @include h2;
     
-    h1 span{
+    h2 span{
         display: block;
     }
     .contenedorimagenes{
         width: 100vw;
-
         display: flex;
         flex-direction: column;
         box-sizing: border-box;

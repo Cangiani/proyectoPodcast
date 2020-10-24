@@ -2,14 +2,23 @@
     display: flex;
     flex-direction: column;
 
+    .telefono{
+        transform: translateY(-5em);
+    }
     .imgtelefono{
-    width: 100vw;
-    height: 9.5%;
+        width: 22.5rem;
+        max-width: 100vw;
+        position: relative; 
+        text-align: center;
+        z-index: 99;
     }
 
     .nosotros{
-        margin-bottom: 3.375rem;
-        h1 span{
+        /*margin-bottom: 3.375rem;*/
+        @include h2;
+        @include parrafo;
+       
+        h2 span{
             display: block;
         }
     }
