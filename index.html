@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>proyectopodcast</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <!--fontawesome.com  LO DEJO aca???-->
     <script src="https://kit.fontawesome.com/4c7892cfac.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!--fontawesome.com  LO DEJO aca???   esta bien? cuando lo clikeo da error?-->
+    
 </head>
 
 <body>
@@ -69,7 +71,8 @@
                     </div>
                     <div class="nosotros" id="nosotros">
                         <h2>De dónde <span>venimos</span></h2>
-                        <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
+                        <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light.</p> 
+                        <p>Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
                     </div>
                 </div>
             </section>
@@ -78,6 +81,7 @@
                 <div class="entrevistas" id="entrevistas">
                     <h2>Invitadas/os <span>estelares</span></h2>
                     <div class="contenedorimagenes">
+                        <!--CADA IMG CON UN DIV?-->
                         <img src="./images/grace-hopper.png" class="img imagen1" alt="grace-hopper">
 
                         <img src="./images/Katie-Bouman.png" class="img imagen2" alt="katie-bouman">
@@ -98,20 +102,29 @@
                     <h2>Algunos de <span>nuestros temas</span></h2>
                     <div class="imagenes">
                         <div>
-                            <img src="./images/icon1.svg" alt="icono1" width="104px" height="104px">
-                            <p>Trabajo remoto</p>
+                            <!--DEBERIA DEJAR LOS DIV?-->
+                            <figure>
+                                <img src="./images/icon1.svg" alt="icono1">
+                                <figcaption>Trabajo remoto</figcaption>
+                            </figure> 
                         </div>
                         <div>
-                            <img src="./images/icon2.svg" alt="icono2" width="104px" height="104px">
-                            <p>Repensando la <span>programación</span></p>
+                            <figure>
+                                <img src="./images/icon2.svg" alt="icono2">
+                                <figcaption>Repensando la <span>programación</span></figcaption>
+                            </figure>
                         </div>
                         <div>
-                            <img src="./images/icon3.svg" alt="icono3" width="104px" height="104px">
-                            <p>Bases del código</p>
+                            <figure>
+                                <img src="./images/icon3.svg" alt="icono3">
+                                <figcaption>Bases del código</figcaption>
+                            </figure>
                         </div>
                         <div>
-                            <img src="./images/icon4.svg" alt="icono4" width="104px" height="104px">
-                            <p>Seguridad <span>informática</span></p>
+                            <figure>
+                                <img src="./images/icon4.svg" alt="icono4">
+                                <figcaption>Seguridad <span>informática</span></figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
