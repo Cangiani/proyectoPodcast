@@ -16,10 +16,12 @@
             width: 100vw;
             height: 5rem;
             justify-content: space-between;
+            padding-left: 6.25rem;
+            
             .logo{
                 width: 2.25rem;
                 height: 2.25rem;
-                margin-left: 6.25rem;
+                padding-top: .5rem;
                 /*AGREGAR: TIENE 22PX DE MARGIN TOP Y 22 DE MARGIN BOTTOM*/
             }
             .btn-menu{
@@ -32,6 +34,7 @@
                 display: none;
             }
             ul {
+                width: 40vw;
                 height: 10vh;
                 margin-right: 6em;
                 display: flex;
@@ -48,6 +51,7 @@
                         color: $color-principal;
                         letter-spacing: 0;
                         text-align: center;
+                        padding: .5em .5em;
 
                         &:hover{
                             color: $color-boton;
@@ -102,37 +106,39 @@
 
         .fondoazul{
             width: 100vw;
-            height: 45rem;
+            height: 55rem;
             clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%);
         }
         .episodios{
-            padding: 2em 0;   /*?*/
-            display: grid;
-            grid-template: repeat(3, 10% 1fr) / repeat(2, 1fr);   
-            grid-column-gap: 1rem;  
+            /*padding-top: 3em;  */
             
             h2{
                 @include titulosresponsive;
-                align-self: center;
+                /*align-self: center;*/
                 margin-left: 12rem;
-                grid-area: 1/1/1/1;  
             }
 
-            iframe{
-            width: 35vw;           /*max-width: 35vw;    /*????*/
-            height: 10rem;
-            }
-            .iframe1{
-                grid-area: 2/1/2/2;
-            }
-            .iframe2{
-                grid-area: 2/2/2/3;
-            }
-            .iframe3{
-                grid-area: 3/1/3/2;
-            }
-            .iframe4{
-                grid-area: 3/2/3/3;
+            .spotify{
+                width: 90vw;
+                margin-left: 6.25rem;
+                display: grid;
+                grid-template: repeat(2, 1fr) / repeat(2, 1fr);   
+                /*grid-column-gap: 1rem;*/
+                /*padding-left: 6.25rem;*/
+                padding-bottom: 4rem;
+
+                .iframe1{
+                    grid-area: 1/1/2/1;
+                }
+                .iframe2{
+                    grid-area: 1/2/2/2;
+                }
+                .iframe3{
+                    grid-area: 2/1/3/1;
+                }
+                .iframe4{
+                    grid-area: 2/2/3/2;
+                }
             }
         }
 

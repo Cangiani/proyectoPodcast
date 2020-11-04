@@ -1,17 +1,38 @@
 .topicos{
-    margin-top: 2rem;   /*es mucha distancia?*/
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    align-content: center;
-    @include h2;
-
-    h2 span{
-        display: block;  /*DEBERIA UNIFICAR ESTE CODIGO? SE REPITE*/
-        /*align-content: flex-start;
-        align-items: flex-start;*/
+    margin-top: 2rem;   
+    
+    h2{
+        @include h2;
+        span{
+            display: block;  /*DEBERIA UNIFICAR ESTE CODIGO? SE REPITE*/
+        }
     }
     .imagenes{
-        margin: 2em;
+        margin: 0 2em;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        align-content: center;
+
+        figure{
+            padding: .5em;
+
+            img{
+                display:block;
+                margin:auto;
+                padding: 1em;
+            }
+            figcaption{
+                font-family: 'IBM Plex Sans';  
+                font-size: 24px;
+                font-weight: 600; 
+                color: $color-principal;
+                letter-spacing: 0;
+                text-align: center;
+            }
+        }
+        .spanmobile{
+            display: block;
+        }
     }
 }

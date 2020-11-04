@@ -14,12 +14,20 @@
     }
 
     .nosotros{
-        /*margin-bottom: 3.375rem;*/
-        @include h2;
-        @include parrafo;
-       
-        h2 span{
-            display: block;
+        margin-top: -3rem;
+        margin-bottom: 1em;
+
+        h2 {
+            @include h2;
+            span{
+                display: block;
+            }
+        }
+
+        p{
+            @include parrafo;
+            margin-left: 1rem;
+            margin-right: 1rem;
         }
     }
 }

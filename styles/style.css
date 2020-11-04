@@ -2,8 +2,8 @@
 header {
   width: 100vw;
   height: 10vh;
-  padding: 0 1em;
-  line-height: 8vh;
+  padding: .5em 1em;
+  /*line-height: 8vh;*/
   font-family: 'IBM Plex Mono';
   /*CHEQUEAR DONDE MAS VA ESTA TIPOGRFIA*/
   font-size: 1rem;
@@ -52,25 +52,26 @@ header {
 .tituloprincipal {
   max-width: 100vw;
   box-sizing: border-box;
+  margin-left: 1rem;
   margin-top: 2em;
-  padding-left: .5em;
-  font-family: 'IBM Plex Sans', sans-serif;
-  /*cambiar*/
-  font-weight: 300;
-  /*funciona?*/
-  font-size: 2rem;
-  /*cambiar*/
-  color: #060A24;
-  letter-spacing: 0;
-  line-height: 2.625rem; }
+  /*padding-left: .5em;*/ }
+  .tituloprincipal h1 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 2.625rem; }
   .tituloprincipal p {
+    /*ESTÁ BIEN????*/
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 400;
     /*???*/
-    font-size: 1rem;
+    font-size: 14px;
     color: #060A24;
     line-height: 1.375rem;
     letter-spacing: 0;
+    margin-bottom: 2em;
     padding-right: 1em;
     /*?*/
     margin-top: 1em; }
@@ -83,72 +84,74 @@ header {
   .tituloprincipal .boton {
     margin-right: 1em;
     width: 18rem;
-    padding: 1em;
+    height: 3rem;
+    /*padding: .5em;*/
+    margin-bottom: 1em;
     background-color: #00F3BB;
-    border: none;
     font-family: 'IBM Plex Mono', monospace;
-    font-weight: 500; }
+    font-size: 16px;
+    font-weight: 500;
+    border: none; }
     .tituloprincipal .boton:hover {
       background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
       color: #FFFFFF; }
 
 .fondoazul {
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-  transform: skewY(-3deg); }
+  transform: skewY(-5deg); }
 
 .episodios {
-  /*DEBERIA PONER EL TAMAÑO ACA Y NO EN EL IFRAME?*/
   width: 100vw;
   /*max-width: 100%;*/
-  transform: skewY(3deg);
-  margin-top: 2em;
+  transform: skewY(5deg);
+  margin-top: 1em;
   padding-bottom: 6rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  color: #060A24;
-  font-family: 'IBM Plex Sans';
-  font-weight: 300;
-  font-size: 36px;
-  letter-spacing: 0;
-  text-align: left;
-  padding-bottom: 2rem; }
+  justify-content: center; }
   .episodios h2 {
+    color: #060A24;
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: 2.5rem;
+    text-align: left;
     margin-left: 1rem;
+    padding-bottom: 1rem;
     margin-top: 1em;
-    margin-bottom: .5em;
     color: #FFFFFF; }
   .episodios iframe {
-    width: 95%;
-    height: 15rem;
+    width: 100%;
+    height: 14.5em;
     border: 0;
-    padding: 0 .5rem;
-    margin: 1em auto 1em auto;
-    box-sizing: border-box;
-    /*allowtransparency="true"   ???*/ }
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box; }
 
 /* lo que hizo laura:
 iframe {
     display: block;
-    box-sizing: border-box;
     width: 100vw;
     height: 14.5em;
-    border: 0;
     margin-top: 5%;
     padding: 0 5%;
 }*/
 /*font-family: 'IBM Plex Mono', monospace;*/
 .entrevistas {
-  width: 100vw;
-  color: #060A24;
-  font-family: 'IBM Plex Sans';
-  font-weight: 300;
-  font-size: 36px;
-  letter-spacing: 0;
-  text-align: left;
-  padding-bottom: 2rem; }
-  .entrevistas h2 span {
-    display: block; }
+  width: 100vw; }
+  .entrevistas h2 {
+    color: #060A24;
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: 2.5rem;
+    text-align: left;
+    margin-left: 1rem;
+    padding-bottom: 1rem; }
+    .entrevistas h2 span {
+      display: block; }
   .entrevistas .contenedorimagenes {
     width: 100vw;
     display: flex;
@@ -159,26 +162,41 @@ iframe {
 
 /*font-family: 'IBM Plex Sans', sans-serif;*/
 .topicos {
-  margin-top: 2rem;
-  /*es mucha distancia?*/
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  align-content: center;
-  color: #060A24;
-  font-family: 'IBM Plex Sans';
-  font-weight: 300;
-  font-size: 36px;
-  letter-spacing: 0;
-  text-align: left;
-  padding-bottom: 2rem; }
-  .topicos h2 span {
-    display: block;
-    /*DEBERIA UNIFICAR ESTE CODIGO? SE REPITE*/
-    /*align-content: flex-start;
-    align-items: flex-start;*/ }
+  margin-top: 2rem; }
+  .topicos h2 {
+    color: #060A24;
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: 2.5rem;
+    text-align: left;
+    margin-left: 1rem;
+    padding-bottom: 1rem; }
+    .topicos h2 span {
+      display: block;
+      /*DEBERIA UNIFICAR ESTE CODIGO? SE REPITE*/ }
   .topicos .imagenes {
-    margin: 2em; }
+    margin: 0 2em;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: center; }
+    .topicos .imagenes figure {
+      padding: .5em; }
+      .topicos .imagenes figure img {
+        display: block;
+        margin: auto;
+        padding: 1em; }
+      .topicos .imagenes figure figcaption {
+        font-family: 'IBM Plex Sans';
+        font-size: 24px;
+        font-weight: 600;
+        color: #060A24;
+        letter-spacing: 0;
+        text-align: center; }
+    .topicos .imagenes .spanmobile {
+      display: block; }
 
 .contenedornosotros {
   display: flex;
@@ -192,27 +210,35 @@ iframe {
     text-align: center;
     z-index: 99; }
   .contenedornosotros .nosotros {
-    /*margin-bottom: 3.375rem;*/
-    color: #060A24;
-    font-family: 'IBM Plex Sans';
-    font-weight: 300;
-    font-size: 36px;
-    letter-spacing: 0;
-    text-align: left;
-    padding-bottom: 2rem;
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 400;
-    /*???*/
-    font-size: 1rem;
-    color: #060A24;
-    line-height: 1.375rem;
-    letter-spacing: 0; }
-    .contenedornosotros .nosotros h2 span {
-      display: block; }
+    margin-top: -3rem;
+    margin-bottom: 1em; }
+    .contenedornosotros .nosotros h2 {
+      color: #060A24;
+      font-family: 'IBM Plex Sans';
+      font-weight: 400;
+      font-size: 36px;
+      letter-spacing: 0;
+      line-height: 2.5rem;
+      text-align: left;
+      margin-left: 1rem;
+      padding-bottom: 1rem; }
+      .contenedornosotros .nosotros h2 span {
+        display: block; }
+    .contenedornosotros .nosotros p {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 400;
+      /*???*/
+      font-size: 14px;
+      color: #060A24;
+      line-height: 1.375rem;
+      letter-spacing: 0;
+      margin-bottom: 2em;
+      margin-left: 1rem;
+      margin-right: 1rem; }
 
 .fondo {
   width: 100vw;
-  height: 30vh;
+  height: 65vh;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%); }
 
@@ -226,24 +252,29 @@ iframe {
   .novedades h2 {
     color: #060A24;
     font-family: 'IBM Plex Sans';
-    font-weight: 300;
+    font-weight: 400;
     font-size: 36px;
     letter-spacing: 0;
+    line-height: 2.5rem;
     text-align: left;
-    padding-bottom: 2rem;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+    margin: .5em 0;
     color: #FFFFFF;
+    font-weight: 300;
     text-align: center; }
     .novedades h2 span {
       display: block; }
   .novedades .boton {
-    margin: 1em 0;
-    /*unica diferencia, en titulo principal es margin-bottom*/
     width: 18rem;
-    padding: 1em;
+    height: 3rem;
+    /*padding: .5em;*/
+    margin-bottom: 1em;
     background-color: #00F3BB;
-    border: none;
     font-family: 'IBM Plex Mono', monospace;
-    font-weight: 500; }
+    font-size: 16px;
+    font-weight: 500;
+    border: none; }
     .novedades .boton:hover {
       background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
       color: #FFFFFF; }
@@ -267,16 +298,6 @@ footer {
   flex-direction: row;
   justify-content: space-evenly; }
 
-* {
-  margin: 0;
-  padding: 0; }
-
-.contenedorprincipal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center; }
-
 /*VISION RESPONSIVE DESKTOP*/
 @media screen and (min-width: 768px) {
   /*IGUAL O MAYOR A 769PX*/
@@ -286,11 +307,12 @@ footer {
     body header {
       width: 100vw;
       height: 5rem;
-      justify-content: space-between; }
+      justify-content: space-between;
+      padding-left: 6.25rem; }
       body header .logo {
         width: 2.25rem;
         height: 2.25rem;
-        margin-left: 6.25rem;
+        padding-top: .5rem;
         /*AGREGAR: TIENE 22PX DE MARGIN TOP Y 22 DE MARGIN BOTTOM*/ }
       body header .btn-menu {
         display: none; }
@@ -299,6 +321,7 @@ footer {
       body header .close {
         display: none; }
       body header ul {
+        width: 40vw;
         height: 10vh;
         margin-right: 6em;
         display: flex;
@@ -312,12 +335,13 @@ footer {
             font-size: 1em;
             color: #060A24;
             letter-spacing: 0;
-            text-align: center; }
+            text-align: center;
+            padding: .5em .5em; }
             body header ul li a:hover {
               color: #00F3BB;
               text-decoration: line-through; }
             body header ul li a:active {
-              color: #060A24;
+              color: rgba(83, 84, 87, 0.56);
               /*NO FUNCIONA ???*/
               text-decoration: line-through; }
     body .tituloprincipal {
@@ -350,35 +374,34 @@ footer {
         display: none; }
     body .fondoazul {
       width: 100vw;
-      height: 45rem;
+      height: 55rem;
       clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%); }
     body .episodios {
-      padding: 2em 0;
-      /*?*/
-      display: grid;
-      grid-template: repeat(3, 10% 1fr)/repeat(2, 1fr);
-      grid-column-gap: 1rem; }
+      /*padding-top: 3em;  */ }
       body .episodios h2 {
         font-size: 48px;
         font-weight: normal;
         /*esta bien?? para que sea vea mas flaca*/
         padding-bottom: 1rem;
         letter-spacing: 0;
-        align-self: center;
-        margin-left: 12rem;
-        grid-area: 1/1/1/1; }
-      body .episodios iframe {
-        width: 35vw;
-        /*max-width: 35vw;    /*????*/
-        height: 10rem; }
-      body .episodios .iframe1 {
-        grid-area: 2/1/2/2; }
-      body .episodios .iframe2 {
-        grid-area: 2/2/2/3; }
-      body .episodios .iframe3 {
-        grid-area: 3/1/3/2; }
-      body .episodios .iframe4 {
-        grid-area: 3/2/3/3; }
+        /*align-self: center;*/
+        margin-left: 12rem; }
+      body .episodios .spotify {
+        width: 90vw;
+        margin-left: 6.25rem;
+        display: grid;
+        grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+        /*grid-column-gap: 1rem;*/
+        /*padding-left: 6.25rem;*/
+        padding-bottom: 4rem; }
+        body .episodios .spotify .iframe1 {
+          grid-area: 1/1/2/1; }
+        body .episodios .spotify .iframe2 {
+          grid-area: 1/2/2/2; }
+        body .episodios .spotify .iframe3 {
+          grid-area: 2/1/3/1; }
+        body .episodios .spotify .iframe4 {
+          grid-area: 2/2/3/2; }
     body .contenedornosotros {
       width: 100vw;
       margin-top: 1em;
@@ -497,6 +520,16 @@ footer {
         justify-content: space-around;
         align-items: flex-end; } }
 /*Para escritorio,     COMPLETAR   */
+* {
+  margin: 0;
+  padding: 0; }
+
+.contenedorprincipal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; }
+
 /*
 body{
     width: 100vw; DEBERIA PONERLO???
