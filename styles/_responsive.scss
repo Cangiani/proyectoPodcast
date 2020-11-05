@@ -1,28 +1,25 @@
-/*VISION RESPONSIVE DESKTOP*/
-@mixin titulosresponsive {
+@mixin titulosresponsive { 
     font-size: 48px;
     font-weight: normal;   /*esta bien?? para que sea vea mas flaca*/
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     letter-spacing: 0;
 }
 
-@media screen and (min-width: 768px){   /*IGUAL O MAYOR A 769PX*/
+@media screen and (min-width: 768px){ /*VISION RESPONSIVE DESKTOP*/
     
     body{
     width: 100vw;
     /*max-width: 1440px;     /*????*/
-
         header{
             width: 100vw;
             height: 5rem;
             justify-content: space-between;
-            padding-left: 6.25rem;
+            padding-left: 6rem;
             
             .logo{
                 width: 2.25rem;
                 height: 2.25rem;
-                padding-top: .5rem;
-                /*AGREGAR: TIENE 22PX DE MARGIN TOP Y 22 DE MARGIN BOTTOM*/
+                padding-top: .5rem;  /*AGREGAR: TIENE 22PX DE MARGIN TOP Y 22 DE MARGIN BOTTOM*/
             }
             .btn-menu{
                 display: none;
@@ -36,7 +33,7 @@
             ul {
                 width: 40vw;
                 height: 10vh;
-                margin-right: 6em;
+                margin-right: 3rem;
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-evenly;
@@ -70,7 +67,7 @@
         .tituloprincipal{
             width: 70vw;
             /*width: 45.125rem;*/
-            margin-left: 12rem;    /*Es el margen de todos los h1 de los bloques-> unificar?*/
+            margin-left: 12.5rem;    
             padding-left: 0;
 
             h1{
@@ -80,15 +77,18 @@
                 display: inline-block;
             }
             p{
-                width: 50vw;
+                width: 39.25rem;
+                font-size: 16px;    /*UNIFICAR P*/
+                letter-spacing: 0;
+                line-height: 24px;
             }
             
-            button{
+            .boton{
                 width: 14.125rem;  /*no funciona, considera el de mobile*/
                 height: 3.5rem;
-                margin-top: 3.5rem;
+                font-size: 18px;
+                margin: 2.5rem 0;   /*deberia ser 3.5rem 0; pero hay un margin del p del mobile*/
                 display: block;
-                border: 0px;
             }
             .span {
                 display: inline;
@@ -106,38 +106,35 @@
 
         .fondoazul{
             width: 100vw;
-            height: 55rem;
-            clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%);
-        }
-        .episodios{
-            /*padding-top: 3em;  */
-            
-            h2{
-                @include titulosresponsive;
-                /*align-self: center;*/
-                margin-left: 12rem;
-            }
+            height: 60rem;
+           
+            .episodios{
+                padding-top: 4rem;  
+                h2{
+                    @include titulosresponsive;
+                    margin-left: 12.5rem;
+                }
 
-            .spotify{
-                width: 90vw;
-                margin-left: 6.25rem;
-                display: grid;
-                grid-template: repeat(2, 1fr) / repeat(2, 1fr);   
-                /*grid-column-gap: 1rem;*/
-                /*padding-left: 6.25rem;*/
-                padding-bottom: 4rem;
-
-                .iframe1{
-                    grid-area: 1/1/2/1;
-                }
-                .iframe2{
-                    grid-area: 1/2/2/2;
-                }
-                .iframe3{
-                    grid-area: 2/1/3/1;
-                }
-                .iframe4{
-                    grid-area: 2/2/3/2;
+                .spotify{
+                    width: 90vw;
+                    display: grid;
+                    grid-template: repeat(2, 1fr) / repeat(2, 1fr);   
+                    grid-gap: 2rem;
+                    margin: auto;
+                    padding-bottom: 14.5rem;
+    
+                    .iframe1{
+                        grid-area: 1/1/2/1;
+                    }
+                    .iframe2{
+                        grid-area: 1/2/2/2;
+                    }
+                    .iframe3{
+                        grid-area: 2/1/3/1;
+                    }
+                    .iframe4{
+                        grid-area: 2/2/3/2;
+                    }
                 }
             }
         }
@@ -151,25 +148,27 @@
             align-items: center;
             align-content: center;
             
-            .imgtelefono{    /*MEJORAR POSICIONAMIENTO Y TAMAÑO*/
-               width: 28.6rem;
-               align-self: center;
+            .telefono{
+                transform: translateY(-8em);
+                margin: auto;
+                width: 28.6rem;
+                height: 41.25rem;
+                margin-left: 12.5rem;
             }
 
             .nosotros{
-                
+                width: 50vw;
+                left: 0;
                 line-height: 1.5em;
-                align-self: flex-start;
-                padding-top: 2rem;
+                padding-bottom: 14rem;
                 h2{
                     @include titulosresponsive;
-                    width: 28rem;   /*deberia ser asi? modificar el tamaño con width?*/
                     span{
                         display: inline-block;
                     }
                 }
                 p{
-                    width: 30rem;
+                    width: 29rem;
                     font-size: 16px;   /*PONERSELO A TODOS !*/
                     margin-bottom: 1em;
                 }
@@ -177,9 +176,10 @@
         }
 
         .entrevistas{
+            margin-top: -8rem;  /*???*/
             h2{
-                margin-left: 12rem;
                 @include titulosresponsive;
+                margin-left: 12.5rem;
                 span{    /*se puede unificar los span?*/
                     display: inline-block;
                 }
@@ -213,12 +213,12 @@
         }
         .topicos{
             width: 100vw;
-            margin-top: 4em;
             display: unset;
             
             h2{
                 @include titulosresponsive;
-                padding-left: 12rem;
+                margin-left: 12.5rem;
+                margin-top: 4rem;
                 span{
                     display: inline-block;
                 }
@@ -228,6 +228,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
+                align-items: baseline;
 
                 figcaption{
                     margin-top: 1em;
@@ -241,10 +242,10 @@
             }
         }
         .fondo{
-            height: 60vh;
+            height: 32.375rem;
             .novedades{
                 width: 100vw;
-                padding-top: 8rem;
+                padding-top: 13.313rem;
                 h2{
                     @include titulosresponsive;
                     span{

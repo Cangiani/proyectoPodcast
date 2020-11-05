@@ -298,9 +298,8 @@ footer {
   flex-direction: row;
   justify-content: space-evenly; }
 
-/*VISION RESPONSIVE DESKTOP*/
 @media screen and (min-width: 768px) {
-  /*IGUAL O MAYOR A 769PX*/
+  /*VISION RESPONSIVE DESKTOP*/
   body {
     width: 100vw;
     /*max-width: 1440px;     /*????*/ }
@@ -308,7 +307,7 @@ footer {
       width: 100vw;
       height: 5rem;
       justify-content: space-between;
-      padding-left: 6.25rem; }
+      padding-left: 6rem; }
       body header .logo {
         width: 2.25rem;
         height: 2.25rem;
@@ -323,7 +322,7 @@ footer {
       body header ul {
         width: 40vw;
         height: 10vh;
-        margin-right: 6em;
+        margin-right: 3rem;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-evenly; }
@@ -347,8 +346,7 @@ footer {
     body .tituloprincipal {
       width: 70vw;
       /*width: 45.125rem;*/
-      margin-left: 12rem;
-      /*Es el margen de todos los h1 de los bloques-> unificar?*/
+      margin-left: 12.5rem;
       padding-left: 0; }
       body .tituloprincipal h1 {
         font-size: 64px;
@@ -356,14 +354,19 @@ footer {
         margin-top: 3rem;
         display: inline-block; }
       body .tituloprincipal p {
-        width: 50vw; }
-      body .tituloprincipal button {
+        width: 39.25rem;
+        font-size: 16px;
+        /*UNIFICAR P*/
+        letter-spacing: 0;
+        line-height: 24px; }
+      body .tituloprincipal .boton {
         width: 14.125rem;
         /*no funciona, considera el de mobile*/
         height: 3.5rem;
-        margin-top: 3.5rem;
-        display: block;
-        border: 0px; }
+        font-size: 18px;
+        margin: 2.5rem 0;
+        /*deberia ser 3.5rem 0; pero hay un margin del p del mobile*/
+        display: block; }
       body .tituloprincipal .span {
         display: inline; }
       body .tituloprincipal .punto {
@@ -374,34 +377,31 @@ footer {
         display: none; }
     body .fondoazul {
       width: 100vw;
-      height: 55rem;
-      clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%); }
-    body .episodios {
-      /*padding-top: 3em;  */ }
-      body .episodios h2 {
-        font-size: 48px;
-        font-weight: normal;
-        /*esta bien?? para que sea vea mas flaca*/
-        padding-bottom: 1rem;
-        letter-spacing: 0;
-        /*align-self: center;*/
-        margin-left: 12rem; }
-      body .episodios .spotify {
-        width: 90vw;
-        margin-left: 6.25rem;
-        display: grid;
-        grid-template: repeat(2, 1fr)/repeat(2, 1fr);
-        /*grid-column-gap: 1rem;*/
-        /*padding-left: 6.25rem;*/
-        padding-bottom: 4rem; }
-        body .episodios .spotify .iframe1 {
-          grid-area: 1/1/2/1; }
-        body .episodios .spotify .iframe2 {
-          grid-area: 1/2/2/2; }
-        body .episodios .spotify .iframe3 {
-          grid-area: 2/1/3/1; }
-        body .episodios .spotify .iframe4 {
-          grid-area: 2/2/3/2; }
+      height: 60rem; }
+      body .fondoazul .episodios {
+        padding-top: 4rem; }
+        body .fondoazul .episodios h2 {
+          font-size: 48px;
+          font-weight: normal;
+          /*esta bien?? para que sea vea mas flaca*/
+          padding-bottom: 2rem;
+          letter-spacing: 0;
+          margin-left: 12.5rem; }
+        body .fondoazul .episodios .spotify {
+          width: 90vw;
+          display: grid;
+          grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+          grid-gap: 2rem;
+          margin: auto;
+          padding-bottom: 14.5rem; }
+          body .fondoazul .episodios .spotify .iframe1 {
+            grid-area: 1/1/2/1; }
+          body .fondoazul .episodios .spotify .iframe2 {
+            grid-area: 1/2/2/2; }
+          body .fondoazul .episodios .spotify .iframe3 {
+            grid-area: 2/1/3/1; }
+          body .fondoazul .episodios .spotify .iframe4 {
+            grid-area: 2/2/3/2; }
     body .contenedornosotros {
       width: 100vw;
       margin-top: 1em;
@@ -410,75 +410,80 @@ footer {
       justify-content: space-evenly;
       align-items: center;
       align-content: center; }
-      body .contenedornosotros .imgtelefono {
-        /*MEJORAR POSICIONAMIENTO Y TAMAÑO*/
+      body .contenedornosotros .telefono {
+        transform: translateY(-8em);
+        margin: auto;
         width: 28.6rem;
-        align-self: center; }
+        height: 41.25rem;
+        margin-left: 12.5rem; }
       body .contenedornosotros .nosotros {
+        width: 50vw;
+        left: 0;
         line-height: 1.5em;
-        align-self: flex-start;
-        padding-top: 2rem; }
+        padding-bottom: 14rem; }
         body .contenedornosotros .nosotros h2 {
           font-size: 48px;
           font-weight: normal;
           /*esta bien?? para que sea vea mas flaca*/
-          padding-bottom: 1rem;
-          letter-spacing: 0;
-          width: 28rem;
-          /*deberia ser asi? modificar el tamaño con width?*/ }
+          padding-bottom: 2rem;
+          letter-spacing: 0; }
           body .contenedornosotros .nosotros h2 span {
             display: inline-block; }
         body .contenedornosotros .nosotros p {
-          width: 30rem;
+          width: 29rem;
           font-size: 16px;
           /*PONERSELO A TODOS !*/
           margin-bottom: 1em; }
-    body .entrevistas h2 {
-      margin-left: 12rem;
-      font-size: 48px;
-      font-weight: normal;
-      /*esta bien?? para que sea vea mas flaca*/
-      padding-bottom: 1rem;
-      letter-spacing: 0; }
-      body .entrevistas h2 span {
-        /*se puede unificar los span?*/
-        display: inline-block; }
-    body .entrevistas .contenedorimagenes {
-      width: 100vw;
-      /*max-width: 100vw;*/
-      box-sizing: border-box;
-      display: grid;
-      grid-template-areas: "imagen1 imagen2 imagen3" "imagen4 imagen5 imagen6"; }
-      body .entrevistas .contenedorimagenes .imagen1 {
-        grid-area: imagen1; }
-      body .entrevistas .contenedorimagenes .imagen2 {
-        grid-area: imagen2; }
-      body .entrevistas .contenedorimagenes .imagen3 {
-        grid-area: imagen3; }
-      body .entrevistas .contenedorimagenes .imagen4 {
-        grid-area: imagen4; }
-      body .entrevistas .contenedorimagenes .imagen5 {
-        grid-area: imagen5; }
-      body .entrevistas .contenedorimagenes .imagen6 {
-        grid-area: imagen6; }
+    body .entrevistas {
+      margin-top: -8rem;
+      /*???*/ }
+      body .entrevistas h2 {
+        font-size: 48px;
+        font-weight: normal;
+        /*esta bien?? para que sea vea mas flaca*/
+        padding-bottom: 2rem;
+        letter-spacing: 0;
+        margin-left: 12.5rem; }
+        body .entrevistas h2 span {
+          /*se puede unificar los span?*/
+          display: inline-block; }
+      body .entrevistas .contenedorimagenes {
+        width: 100vw;
+        /*max-width: 100vw;*/
+        box-sizing: border-box;
+        display: grid;
+        grid-template-areas: "imagen1 imagen2 imagen3" "imagen4 imagen5 imagen6"; }
+        body .entrevistas .contenedorimagenes .imagen1 {
+          grid-area: imagen1; }
+        body .entrevistas .contenedorimagenes .imagen2 {
+          grid-area: imagen2; }
+        body .entrevistas .contenedorimagenes .imagen3 {
+          grid-area: imagen3; }
+        body .entrevistas .contenedorimagenes .imagen4 {
+          grid-area: imagen4; }
+        body .entrevistas .contenedorimagenes .imagen5 {
+          grid-area: imagen5; }
+        body .entrevistas .contenedorimagenes .imagen6 {
+          grid-area: imagen6; }
     body .topicos {
       width: 100vw;
-      margin-top: 4em;
       display: unset; }
       body .topicos h2 {
         font-size: 48px;
         font-weight: normal;
         /*esta bien?? para que sea vea mas flaca*/
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         letter-spacing: 0;
-        padding-left: 12rem; }
+        margin-left: 12.5rem;
+        margin-top: 4rem; }
         body .topicos h2 span {
           display: inline-block; }
       body .topicos .imagenes {
         margin: 2rem 10rem;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly; }
+        justify-content: space-evenly;
+        align-items: baseline; }
         body .topicos .imagenes figcaption {
           margin-top: 1em;
           font-size: 24px;
@@ -487,15 +492,15 @@ footer {
           body .topicos .imagenes figcaption span {
             display: block; }
     body .fondo {
-      height: 60vh; }
+      height: 32.375rem; }
       body .fondo .novedades {
         width: 100vw;
-        padding-top: 8rem; }
+        padding-top: 13.313rem; }
         body .fondo .novedades h2 {
           font-size: 48px;
           font-weight: normal;
           /*esta bien?? para que sea vea mas flaca*/
-          padding-bottom: 1rem;
+          padding-bottom: 2rem;
           letter-spacing: 0; }
           body .fondo .novedades h2 span {
             display: inline-block; }
