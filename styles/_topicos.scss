@@ -4,7 +4,7 @@
     h2{
         @include h2;
         span{
-            display: block;  /*DEBERIA UNIFICAR ESTE CODIGO? SE REPITE*/
+            display: block;  
         }
     }
     .imagenes{
@@ -15,7 +15,7 @@
         align-content: center;
 
         figure{
-            padding: .5em;
+            padding: 1rem;
 
             img{
                 display:block;

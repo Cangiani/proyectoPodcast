@@ -1,6 +1,6 @@
 .fondo{
     width: 100vw;
-    height: 65vh;
+    height: 21rem;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
     clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
 }
@@ -23,7 +23,7 @@
             display: block;
         }
     }
-    .boton{    
+    .segundoboton{    
         @include boton;
     }
 }

@@ -81,20 +81,25 @@ header {
     display: block; }
   .tituloprincipal .spandos {
     text-decoration: line-through; }
-  .tituloprincipal .boton {
+  .tituloprincipal .primerboton {
     margin-right: 1em;
     width: 18rem;
     height: 3rem;
-    /*padding: .5em;*/
     margin-bottom: 1em;
     background-color: #00F3BB;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 16px;
-    font-weight: 500;
-    border: none; }
-    .tituloprincipal .boton:hover {
-      background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
-      color: #FFFFFF; }
+    box-sizing: border-box;
+    border: 0;
+    /*padding: .5em; /*??*/
+    text-align: center;
+    align-self: center;
+    text-decoration: none; }
+    .tituloprincipal .primerboton a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 16px;
+      font-weight: 500; }
+      .tituloprincipal .primerboton a:hover {
+        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        color: #FFFFFF; }
 
 .fondoazul {
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
@@ -174,8 +179,7 @@ iframe {
     margin-left: 1rem;
     padding-bottom: 1rem; }
     .topicos h2 span {
-      display: block;
-      /*DEBERIA UNIFICAR ESTE CODIGO? SE REPITE*/ }
+      display: block; }
   .topicos .imagenes {
     margin: 0 2em;
     display: flex;
@@ -183,7 +187,7 @@ iframe {
     align-items: center;
     align-content: center; }
     .topicos .imagenes figure {
-      padding: .5em; }
+      padding: 1rem; }
       .topicos .imagenes figure img {
         display: block;
         margin: auto;
@@ -238,7 +242,7 @@ iframe {
 
 .fondo {
   width: 100vw;
-  height: 65vh;
+  height: 21rem;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%); }
 
@@ -265,19 +269,24 @@ iframe {
     text-align: center; }
     .novedades h2 span {
       display: block; }
-  .novedades .boton {
+  .novedades .segundoboton {
     width: 18rem;
     height: 3rem;
-    /*padding: .5em;*/
     margin-bottom: 1em;
     background-color: #00F3BB;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 16px;
-    font-weight: 500;
-    border: none; }
-    .novedades .boton:hover {
-      background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
-      color: #FFFFFF; }
+    box-sizing: border-box;
+    border: 0;
+    /*padding: .5em; /*??*/
+    text-align: center;
+    align-self: center;
+    text-decoration: none; }
+    .novedades .segundoboton a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 16px;
+      font-weight: 500; }
+      .novedades .segundoboton a:hover {
+        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        color: #FFFFFF; }
 
 footer {
   width: 100vh;
@@ -367,7 +376,7 @@ footer {
         /*UNIFICAR P*/
         letter-spacing: 0;
         line-height: 24px; }
-      body .tituloprincipal .boton {
+      body .tituloprincipal .primerboton {
         width: 14.125rem;
         /*no funciona, considera el de mobile*/
         height: 3.5rem;
