@@ -23,7 +23,7 @@
             display: block;
         }
     }
-    .segundoboton{    
-        @include boton;
+    .segundoboton a{ 
+        @include boton;     
     }
 }

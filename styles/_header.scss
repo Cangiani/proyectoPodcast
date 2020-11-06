@@ -2,9 +2,9 @@ header{
     width: 100vw;
     height: 10vh;
     padding: .5em 1em;
-    /*line-height: 8vh;*/
-    font-family: 'IBM Plex Mono';           /*CHEQUEAR DONDE MAS VA ESTA TIPOGRFIA*/
-    font-size: 1rem;
+    line-height: 8vh;
+    font-family: 'IBM Plex Mono';      
+    font-size: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,29 +12,28 @@ header{
 
     nav {
         input{
-            display:none;    /*PARA QUITAR LOS BULLETS*/
-            /*agregar fontsize y margin right?*/
+            display:none;   
         }
         
         .open{
-            display: block;         /*el icono de hamburguesa se ve*/
+            display: block;        
         }
         
-        .close{                       /*sin clickear, no se ve la cruz*/
+        .close{                     
             display: none;
         }
 
-        input:checked ~ .open{       /*cuando se clikea icono hamburguesa desaparece*/
+        input:checked ~ .open{      
             display: none;
         }
-        input:checked ~ .close{        /*cuando se clickea la hamburg aparece la cruz*/
+        input:checked ~ .close{    
             display: block;
         }
-        input:checked ~ul{   /*CUANDO SE CLICKEA EL INPUT*/
+        input:checked ~ul{  
             display:block;
         }
         ul{
-            width: 20rem;
+            width: 100vw;
             height: 14rem;
             display: none;
             position: absolute;
@@ -50,7 +49,7 @@ header{
                 a{
                     color: $color-blanco;
                     line-height: 1.375em;
-                    text-decoration: none; /*por qué deberia aclararlo?*/
+                    text-decoration: none; 
                 }
             }
         }  

@@ -1,13 +1,13 @@
 @import 'variables';
 @import 'header';
 @import 'tituloprincipal';
-@import 'episodios';                /*font-family: 'IBM Plex Mono', monospace;*/
-@import 'entrevistas';              /*font-family: 'IBM Plex Sans', sans-serif;*/
+@import 'episodios';               
+@import 'entrevistas';            
 @import 'topicos';
 @import 'nosotros';
 @import 'novedades';
 @import 'footer';
-@import 'responsive'; /*Para escritorio,     COMPLETAR   */
+@import 'responsive';   /*Breakpoint 768px*/
 
 *{
     margin: 0;   
@@ -20,8 +20,3 @@
     justify-content: center;
     align-content: center;
 }
-/*
-body{
-    width: 100vw; DEBERIA PONERLO???
-    background-color: $color-blanco; es necesario?
-}*/
